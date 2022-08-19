@@ -5,7 +5,7 @@ import json
 
 pingr = commands.Bot(command_prefix="_", help_command=None)
 
-# full credits of this code goes to Geb#1337
+# full credits of this code goes to Hachiki#3819
 
 with open("config.json") as f:
     geb = json.load(f)
@@ -31,7 +31,7 @@ async def on_ready():
 
 @pingr.slash_command(guild_ids=[guildid])
 async def ping(ctx):
-    await ctx.respond(f"{round(pingr.latency * 10000)}ms")
+    await ctx.respond(f"{round(pingr.latency * 10000)}ms") # latency will be the speed of the message of the bot
 
 
 pingr.run(bottoken)
